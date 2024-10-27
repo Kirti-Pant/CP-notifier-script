@@ -1,18 +1,49 @@
-Competitive Programming Notifier Script
+# Competitive Programming Notifier Script
 
-The Competitive Programming Notifier Script is a Python-based tool designed to keep users informed about upcoming competitive programming competitions from selected websites. The script offers three notification methods: desktop notifications, email alerts, and SMS messages, allowing users to choose their preferred means of communication.
+### Short Description
+The **Competitive Programming Notifier Script** is a Python tool designed to keep users informed about upcoming coding competitions from selected websites through desktop notifications, email alerts, and SMS messages.
 
-Key Features:
-Desktop Notifications: Users receive instant alerts on their computers, ensuring they don't miss any important competitions.
-Email Notifications: The script sends detailed emails to keep users updated about upcoming events, including competition names, dates, and links.
-SMS Notifications: Users can receive alerts directly on their mobile devices for maximum convenience.
-Configurable Settings: Users can easily enable or disable notification methods according to their preferences. They can set up their email credentials and Twilio API information for SMS alerts.
+### Functionalities
+- **Desktop Notifications**: Sends instant alerts to the user’s computer.
+- **Email Notifications**: Sends detailed emails with competition details.
+- **SMS Notifications**: Sends text alerts directly to the user's mobile phone.
+- **Competition Monitoring**: Fetches and monitors upcoming competitions from specified websites.
+- **Configurable Settings**: Users can enable or disable notification methods and set up their credentials easily.
 
-Competition Monitoring: The script includes a function to fetch upcoming competitions from specified websites. While it includes a sample list, users can customize it to scrape data from their preferred competition platforms.
+### Setup Instructions
+1. **Install Required Libraries**: Use the following command to install necessary libraries:
+   ```bash
+   pip install plyer twilio
+   ```
 
-Regular Checks: The script runs continuously, checking for new competitions at specified intervals (daily by default), ensuring users are always informed in a timely manner.
+2. **Configure Email and SMS Settings**:
+   - Update the email credentials (your email and password) in the script.
+   - Set up Twilio API credentials (Account SID, Auth Token, and phone numbers).
 
-User-Friendly Implementation: Written in Python, the script utilizes popular libraries like plyer for desktop notifications, smtplib for sending emails, and the twilio library for SMS notifications, making it accessible for users with basic programming knowledge.
+3. **Run the Script**: Execute the script using Python:
+   ```bash
+   python notifier_script.py
+   ```
 
-Use Case:
-Ideal for competitive programmers, coding enthusiasts, or anyone interested in programming contests, this notifier script serves as a reliable companion to ensure they stay updated with the latest events in the competitive programming community. By receiving timely notifications, users can better manage their schedules and increase their chances of participating in these contests.
+### Detailed Explanation of Script
+The script operates by checking for upcoming competitive programming events at regular intervals (daily by default). It utilizes:
+- `plyer` for sending desktop notifications.
+- `smtplib` for sending emails.
+- `twilio` for SMS alerts.
+
+In the `check_competitions` function, the user can customize the logic to fetch data from chosen websites (this part is currently a placeholder).
+
+### Output
+The script provides notifications in the following forms:
+- **Desktop Notification**: A pop-up alert on your computer screen.
+- **Email Notification**: An email detailing the competition information.
+- **SMS Notification**: A text message sent to your mobile device.
+
+
+
+### Author(s)
+- Kirti Pant
+
+### Disclaimers
+- Ensure that your email account allows less secure apps if using Gmail. Consider using an app password for enhanced security.
+- The Twilio service may incur charges based on your usage; ensure you are aware of their pricing.
